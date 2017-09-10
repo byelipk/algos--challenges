@@ -34,13 +34,15 @@ function missingNo(array) {
 function missingNoSort(TheArray) {
   const TheHash    = {};
   const TheMissing = {};
+  const TheKeys    = [];
 
-  // Fill TheHash
+  // Fill TheHash O(n)
   for (var i = 1; i <= 100; i++) {
     TheHash[i] = false;
+    TheKeys.push(i);
   }
 
-  // Compare TheHash and TheArray
+  // Compare TheHash and TheArray O(n)
   for (var i = 0; i < TheArray.length; i++) {
     const value = TheHash[TheArray[i]];
     if (value) {
@@ -48,7 +50,8 @@ function missingNoSort(TheArray) {
     }
   }
 
-  Object.keys(TheHash).forEach(number => {
+  // O(n)
+  TheKeys.forEach(number => {
     if (TheHash[number] === false) {
       TheMissing[number] = true;
     }
