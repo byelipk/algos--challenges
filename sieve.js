@@ -56,13 +56,14 @@ function sieveTwo(n) {
     list[i] = { index: i, marked: false };
   }
 
-  const limit = Math.sqrt(n);  // 10
+  // We don't have to find multiples past the square root of n
+  const limit = Math.sqrt(n);
 
   // We want to mark off values that should be excluded
   for (var i = 2; i <= limit; i++) {
     recurseInto(list, (value) => {
       if (value.index > i) {
-        if (value.index % i === 0) {
+        if (value.index % i === 0) {   // mark all the multiples of i
           value.marked = true;
         }
       }
