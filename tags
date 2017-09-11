@@ -8,21 +8,36 @@ BAG	ex1.js	/^const BAG = [];$/;"	n
 Index	ex1.js	/^const randomIndex = getRandomInt(1, 101);$/;"	c
 TheHash	ex1.js	/^  const TheHash    = {};$/;"	c
 TheMissing	ex1.js	/^  const TheMissing = {};$/;"	c
+fib	fib.js	/^function fib(n) {$/;"	f
+fibCached	fib.js	/^function fibCached(n) {$/;"	f
+fibGreedy	fib.js	/^function fibGreedy(n) {$/;"	f
+fibWithCB	fib.js	/^function fibWithCB(n, cb) {$/;"	f
 find_pivot	q-sort.js	/^function find_pivot(array, lo_index, hi_index) {$/;"	f
 for	ex1.js	/^  for (var i = 0; i < TheArray.length; i++) {$/;"	f
 for	ex1.js	/^  for (var i = 1; i <= 100; i++) {$/;"	f
 for	ex1.js	/^for (var i = 1; i <= 100; i++) {$/;"	f
+for	fib.js	/^  for (var i = 2; i <= n; i++) {$/;"	f
+for	fib.js	/^for (var i = 0; i <= 10; i++) {$/;"	f
 for	more-sum-pairs.js	/^    for (var j = 0; j < input.length; j++) {$/;"	f
 for	more-sum-pairs.js	/^  for (var i = 0; i < input.length; i++) {$/;"	f
 for	more-sum-pairs.js	/^  for (var i = 0; i < sorted.length; i++) {$/;"	f
+for	sieve.js	/^    for (var x = i + i; x <= n; x += i) {$/;"	f
+for	sieve.js	/^  for (var i = 2; i <= limit; i++) {$/;"	f
+for	sieve.js	/^  for (var i = 2; i <= n; i++) {$/;"	f
 for	sum-pairs.js	/^    for (var j = 0; j < list.length; j++) {$/;"	f
 for	sum-pairs.js	/^  for (var i = 0; i < list.length; i++) {$/;"	f
+function	sieve.js	/^Array.prototype.head = function() {$/;"	f
+function	sieve.js	/^Array.prototype.tail = function() {$/;"	f
 getRandomInt	ex1.js	/^function getRandomInt(min, max) {$/;"	f
+head	sieve.js	/^Array.prototype.head = function() {$/;"	f
 if	even-more-merging.js	/^    if (left[0] < right[0]) { result.push(left.shift()) }$/;"	f
 if	even-more-merging.js	/^  if (!target) {$/;"	f
 if	ex1.js	/^    if (TheHash[number] === false) {$/;"	f
 if	ex1.js	/^    if (state.found) {$/;"	f
 if	ex1.js	/^    if (value) {$/;"	f
+if	fib.js	/^    if (cb) {$/;"	f
+if	fib.js	/^  if (cb) {$/;"	f
+if	fib.js	/^  if (n < 2) { return n; }$/;"	f
 if	merge-sorting.js	/^    if (left[0] < right[0]) { result.push(left.shift()) }$/;"	f
 if	merge-sorting.js	/^  if (unsorted.length <= 1) { return unsorted; }$/;"	f
 if	merging.js	/^    if (left[0] < right[0]) { output.push(left.shift()); }$/;"	f
@@ -39,6 +54,12 @@ if	q-sort.js	/^  if (array.length < 2)       { return array; }  \/\/ The base ca
 if	q-sort.js	/^  if (hi_index === undefined) { hi_index = array.length - 1; }$/;"	f
 if	q-sort.js	/^  if (lo_index < hi_index) {$/;"	f
 if	q-sort.js	/^  if (lo_index === undefined) { lo_index = 0; }$/;"	f
+if	sieve.js	/^        if (value.index % i === 0) {   \/\/ mark all the multiples of i$/;"	f
+if	sieve.js	/^      if (value.index > i) {$/;"	f
+if	sieve.js	/^    if (!grid[i].marked) {$/;"	f
+if	sieve.js	/^    if (!value.marked) { output.push(value.index); }$/;"	f
+if	sieve.js	/^  if (h && fn) { fn(h); }$/;"	f
+if	sieve.js	/^  if (t && fn) { recurseInto(t, fn); }$/;"	f
 if	sum-pairs.js	/^      if (n1 + n2 == target) {$/;"	f
 if	sum-pairs.js	/^    if (n2) {$/;"	f
 if	sum-pairs.js	/^    if (pair[0] !== undefined && pair[1] !== undefined) {$/;"	f
@@ -65,7 +86,11 @@ onePassSortedPos	more-sum-pairs.js	/^function onePassSortedPos(input, targetSum)
 onePassSortedWithCB	more-sum-pairs.js	/^function onePassSortedWithCB(input, targetSum, callback) {$/;"	f
 partition	q-sort.js	/^function partition(array, lo_index, hi_index) {$/;"	f
 qsort	q-sort.js	/^function qsort(array, lo_index, hi_index) {$/;"	f
+recurseInto	sieve.js	/^function recurseInto(list, fn) {$/;"	f
+sieve	sieve.js	/^function sieve(n) {$/;"	f
+sieveTwo	sieve.js	/^function sieveTwo(n) {$/;"	f
 swap	q-sort.js	/^function swap(array, i, j) {$/;"	f
+tail	sieve.js	/^Array.prototype.tail = function() {$/;"	f
 while	even-more-merging.js	/^  while(left.length && result.length < target) {$/;"	f
 while	even-more-merging.js	/^  while(left.length > 0 && right.length > 0 && result.length < target) {$/;"	f
 while	even-more-merging.js	/^  while(right.length && result.length < target) {$/;"	f
