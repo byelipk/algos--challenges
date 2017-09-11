@@ -1,0 +1,84 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BAG	ex1.js	/^const BAG = [];$/;"	n
+Index	ex1.js	/^const randomIndex = getRandomInt(1, 101);$/;"	c
+TheHash	ex1.js	/^  const TheHash    = {};$/;"	c
+TheMissing	ex1.js	/^  const TheMissing = {};$/;"	c
+find_pivot	q-sort.js	/^function find_pivot(array, lo_index, hi_index) {$/;"	f
+for	ex1.js	/^  for (var i = 0; i < TheArray.length; i++) {$/;"	f
+for	ex1.js	/^  for (var i = 1; i <= 100; i++) {$/;"	f
+for	ex1.js	/^for (var i = 1; i <= 100; i++) {$/;"	f
+for	more-sum-pairs.js	/^    for (var j = 0; j < input.length; j++) {$/;"	f
+for	more-sum-pairs.js	/^  for (var i = 0; i < input.length; i++) {$/;"	f
+for	more-sum-pairs.js	/^  for (var i = 0; i < sorted.length; i++) {$/;"	f
+for	sum-pairs.js	/^    for (var j = 0; j < list.length; j++) {$/;"	f
+for	sum-pairs.js	/^  for (var i = 0; i < list.length; i++) {$/;"	f
+getRandomInt	ex1.js	/^function getRandomInt(min, max) {$/;"	f
+if	even-more-merging.js	/^    if (left[0] < right[0]) { result.push(left.shift()) }$/;"	f
+if	even-more-merging.js	/^  if (!target) {$/;"	f
+if	ex1.js	/^    if (TheHash[number] === false) {$/;"	f
+if	ex1.js	/^    if (state.found) {$/;"	f
+if	ex1.js	/^    if (value) {$/;"	f
+if	merge-sorting.js	/^    if (left[0] < right[0]) { result.push(left.shift()) }$/;"	f
+if	merge-sorting.js	/^  if (unsorted.length <= 1) { return unsorted; }$/;"	f
+if	merging.js	/^    if (left[0] < right[0]) { output.push(left.shift()); }$/;"	f
+if	more-merging.js	/^    if (left[0] < right[0]) { result.push(left.shift()) }$/;"	f
+if	more-sum-pairs.js	/^      if (n1 + n2 === targetSum) {$/;"	f
+if	more-sum-pairs.js	/^    if (left[0] < right[0]) { result.push(left.shift()) }$/;"	f
+if	more-sum-pairs.js	/^    if (n1 > 0 && n2 > 0) {$/;"	f
+if	more-sum-pairs.js	/^    if (n2) {$/;"	f
+if	more-sum-pairs.js	/^    if (pairExists !== undefined) {$/;"	f
+if	more-sum-pairs.js	/^  if (a > 0 && b > 0) {$/;"	f
+if	more-sum-pairs.js	/^  if (input.length <= 1) { return input; }$/;"	f
+if	q-sort.js	/^    if (i < j) {$/;"	f
+if	q-sort.js	/^  if (array.length < 2)       { return array; }  \/\/ The base case$/;"	f
+if	q-sort.js	/^  if (hi_index === undefined) { hi_index = array.length - 1; }$/;"	f
+if	q-sort.js	/^  if (lo_index < hi_index) {$/;"	f
+if	q-sort.js	/^  if (lo_index === undefined) { lo_index = 0; }$/;"	f
+if	sum-pairs.js	/^      if (n1 + n2 == target) {$/;"	f
+if	sum-pairs.js	/^    if (n2) {$/;"	f
+if	sum-pairs.js	/^    if (pair[0] !== undefined && pair[1] !== undefined) {$/;"	f
+linearTime	more-sum-pairs.js	/^function linearTime(input, targetSum) {$/;"	f
+linearTimeSorted	more-sum-pairs.js	/^function linearTimeSorted(input, targetSum) {$/;"	f
+merge	even-more-merging.js	/^function merge(left, right, target) {$/;"	f
+merge	merge-sorting.js	/^function merge(left, right) {$/;"	f
+merge	merging.js	/^function merge(left, right) {$/;"	f
+merge	more-merging.js	/^function merge(left, right) {$/;"	f
+merge	more-sum-pairs.js	/^function merge(left, right) {$/;"	f
+mergeSort	merge-sorting.js	/^function mergeSort(unsorted) {$/;"	f
+mergeSort	merging.js	/^function mergeSort(unsorted) {$/;"	f
+mergeSort	more-sum-pairs.js	/^function mergeSort(input) {$/;"	f
+missingNo	ex1.js	/^function missingNo(array) {$/;"	f
+missingNoSort	ex1.js	/^function missingNoSort(TheArray) {$/;"	f
+ohN	sum-pairs.js	/^function ohN(list, target) {$/;"	f
+ohNSquared	more-sum-pairs.js	/^function ohNSquared(input, targetSum) {$/;"	f
+ohNSquared	sum-pairs.js	/^function ohNSquared(list, target) {$/;"	f
+ohNSquaredSorted	more-sum-pairs.js	/^function ohNSquaredSorted(input, targetSum) {$/;"	f
+onePass	more-sum-pairs.js	/^function onePass(input, targetSum) {$/;"	f
+onePass	sum-pairs.js	/^function onePass(list, target) {$/;"	f
+onePassSorted	more-sum-pairs.js	/^function onePassSorted(input, targetSum) {$/;"	f
+onePassSortedPos	more-sum-pairs.js	/^function onePassSortedPos(input, targetSum) {$/;"	f
+onePassSortedWithCB	more-sum-pairs.js	/^function onePassSortedWithCB(input, targetSum, callback) {$/;"	f
+partition	q-sort.js	/^function partition(array, lo_index, hi_index) {$/;"	f
+qsort	q-sort.js	/^function qsort(array, lo_index, hi_index) {$/;"	f
+swap	q-sort.js	/^function swap(array, i, j) {$/;"	f
+while	even-more-merging.js	/^  while(left.length && result.length < target) {$/;"	f
+while	even-more-merging.js	/^  while(left.length > 0 && right.length > 0 && result.length < target) {$/;"	f
+while	even-more-merging.js	/^  while(right.length && result.length < target) {$/;"	f
+while	merge-sorting.js	/^  while(left.length > 0 && right.length > 0) {$/;"	f
+while	merge-sorting.js	/^  while(left.length > 0) {$/;"	f
+while	merge-sorting.js	/^  while(right.length > 0) {$/;"	f
+while	merging.js	/^  while(left.length > 0 && right.length > 0) {$/;"	f
+while	merging.js	/^  while(left.length > 0)  { output.push(left.shift()); }$/;"	f
+while	merging.js	/^  while(right.length > 0) { output.push(right.shift()); }$/;"	f
+while	more-merging.js	/^  while(left.length > 0 && right.length > 0) {$/;"	f
+while	more-merging.js	/^  while(left.length) {$/;"	f
+while	more-merging.js	/^  while(right.length) {$/;"	f
+while	more-sum-pairs.js	/^  while (left.length > 0 && right.length > 0) {$/;"	f
+while	more-sum-pairs.js	/^  while(left.length > 0) {$/;"	f
+while	more-sum-pairs.js	/^  while(right.length > 0) {$/;"	f
+while	q-sort.js	/^  while (true) {$/;"	f
