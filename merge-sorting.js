@@ -1,4 +1,3 @@
-// O(n)
 function merge(left, right) {
   const result = [];
 
@@ -7,11 +6,11 @@ function merge(left, right) {
     else                    { result.push(right.shift()) }
   }
 
-  while(left.length) {
+  while(left.length > 0) {
     result.push(left.shift())
   }
 
-  while(right.length) {
+  while(right.length > 0) {
     result.push(right.shift())
   }
 
@@ -19,22 +18,18 @@ function merge(left, right) {
 }
 
 // O(n log n)
-// Recursive, divide & conquer algorithm.
 function mergeSort(unsorted) {
   if (unsorted.length <= 1) { return unsorted; }
 
   const midpoint = Math.floor(unsorted.length / 2);
+
+  // The Array.slice API takes a starting index position,
+  // and then an exclusive ending index position. You can
+  // read it like, "Starting from X, go up to, but not including, Y."
   const left     = mergeSort(unsorted.slice(0, midpoint));
   const right    = mergeSort(unsorted.slice(midpoint, unsorted.length));
 
   return merge(left, right);
 }
 
-
-
-console.log(mergeSort([3,1,2,5,6,4]))
-console.log(mergeSort([1,2,4,3,6,5]))
-console.log(mergeSort([2,1,5,4,3,6]))
-console.log(mergeSort([1,2,6,4,5,3]))
-console.log(mergeSort([6,4,3,2,5,1]))
-console.log(mergeSort([]))
+console.log(mergeSort([9,3,1,6,5,7,8,0,2,4]))
