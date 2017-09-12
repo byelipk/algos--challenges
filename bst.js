@@ -72,3 +72,24 @@ console.log(binarySearch([1,2,3,4,5,6,7,8,9], 9))
       return midpoint
 
 **/
+
+function TheBS(list, target) {
+  let min = 0;
+  let max = list.length;
+
+  while (min <= max) {
+    let midpoint = Math.floor((min+max) / 2);
+
+    if (list[midpoint] === target) {
+      return midpoint;
+    }
+    else if (list[midpoint] < target) {
+      min = midpoint;
+    }
+    else {
+      max = midpoint;
+    }
+  }
+  return -1;
+}
+console.log(TheBS([1,2,3,4,5,6,7,8,9], 9))
