@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "dbg": "node --inspect --debug-brk",
+    "test:dbg": "node --inspect-brk ./node_modules/.bin/jest"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
