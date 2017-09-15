@@ -38,21 +38,39 @@ test('findMax', () => {
   expect(max.depth).toEqual(3);
 });
 
-test('tree with one node is valid', () => {
-  const t1 = new BST(1);
-  const t2 = new BST(1).add(0).add(2);
-  const t3 = new BST(1).add(0).add(2);
-  t3.value = -10;
+test('tree with 1 nodde is valid', () => {
+  const t = new BST(1);
+  expect(t.isValid()).toBe(true);
+});
 
-  const t4 = new BST(1).add(0).add(2);
-  t4.value = 10;
+test('lesser child node on the left and greater child node on the right', () => {
+  const t = new BST(1).add(0).add(2);
+  expect(t.isValid()).toBe(true);
+});
 
-  const t5 = new BST(1).add(0);
-  t5.left.add(-1).add(10).add(9).add(11);
+test('left subtree contains node that should be in right subtree', () => {
+  const t = new BST(1).add(0).add(-1).add(2);
+  t.left.right = new BST(10);
+  expect(t.isValid()).toBe(false);
+});
 
-  expect(t1.isValid()).toBe(true);
-  expect(t2.isValid()).toBe(true);
-  expect(t3.isValid()).toBe(false);
-  expect(t4.isValid()).toBe(false);
-  expect(t5.isValid()).toBe(false);
+test('trees with duplicate values placed incorrectly are invalid', () => {
+  const t = new BST(1).add(0).add(2).add(3);
+  t.right.left = new BST(1);
+
+  expect(t.isValid()).toBe(false);
+});
+
+test('infinity as a value is invalid', () => {
+  const t = new BST(1).add(0).add(2);
+  t.right.right = new BST(Infinity);
+
+  expect(t.isValid()).toBe(false);
+});
+
+test('-infinity as a value is invalid', () => {
+  const t = new BST(1).add(0).add(2);
+  t.left.left = new BST(-Infinity);
+
+  expect(t.isValid()).toBe(false);
 });

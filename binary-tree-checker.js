@@ -102,24 +102,21 @@ class BST {
     const stack = [];
 
     // What's is our "best answer so far"?
-    stack.push([this, this.value, this.value]);
+    stack.push({node: this, lower: -Infinity, upper: Infinity});
 
     while(stack.length > 0) {
-      let [node, lower, upper] = stack.pop();
+      const { node, lower, upper } = stack.pop();
 
-      // Prevent this code running against the tree root
-      if (node !== this) {
-        if (node.value < lower || node.value > upper) {
-          return false;
-        }
+      if (node.value <= lower || node.value >= upper) {
+        return false;
       }
 
       if (node.right) {
-        stack.push([node.right, lower, node.right.value]);
+        stack.push({node: node.right, lower: node.value, upper: upper});
       }
 
       if (node.left) {
-        stack.push([node.left, node.left.value, lower]);
+        stack.push({node: node.left, lower: lower, upper: node.value});
       }
     }
 
