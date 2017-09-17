@@ -15,6 +15,23 @@ How can I trim down the amount of space taken up by visited?
 */
 
 class Trie {
+  // So, how many characters are stored in our trie?
+  //
+  // Assume we can only store 26 chars in the trie [a-zA-Z].
+  // Let's also assume we limit the length of the string to 5 characters.
+  // That means the first character has 26 possibilities. The second
+  // character also has 26 possibilities, but it also has 26 children
+  // posibilities, or 26^2 child nodes. And so on...
+  //
+  // To store store all 1, 2, 3, 4, or 5 character URLs, the trie
+  // will have 5 layers, making the total number of nodes:
+  //
+  //  26^5 + 26^4 + 26^3 + 26^2 + 26^1
+  //
+  // That means for all URLs of length n or fewer the total number
+  // of nodes is: 26^n + (26^n-1 ...) + 26^1
+  //
+  // The big o of this is O(26 n)
   constructor() {
     this.rootNode = {};
   }
