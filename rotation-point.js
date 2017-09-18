@@ -1,0 +1,62 @@
+const words = [
+  "ptolemaic",
+  "retrograde",
+  "supplant",
+  "undulate",
+  "xenoepist",
+  "asymptote", // <-- rotates here!
+  "babka",
+  "banoffee",
+  "engender",
+  "karpatka",
+  "othellolagkage"
+];
+
+// O(n) time and O(1) space
+function linearTime(array) {
+  let foldIndex = -1;
+  for (let i = 1; i < array.length; i += 1) {
+    if (array[i] < array[i-1]) {
+      foldIndex = i;
+      break
+    }
+  }
+  return foldIndex;
+}
+
+
+// Binary search here makes sense because the input array
+// is mostly sorted. Once we figure out the pattern for how
+// the array is sorted, we can modify our binary search.
+
+// words = [ 'k','v','a','b','c','d','e','g','i' ];
+// words = [ 'v','a' ]
+function logN(sorted) {
+  let lowerIndex = 0;
+  let upperIndex = sorted.length - 1;
+
+  while (lowerIndex < upperIndex) {
+    const distance = upperIndex - lowerIndex;
+    const middleIndex = Math.floor(distance/2);
+    const guessIndex  = lowerIndex + middleIndex;
+    const item = sorted[guessIndex];
+
+    if (item < sorted[lowerIndex]) {
+      // divide left by shifting the upper index down
+      upperIndex = guessIndex;
+    }
+    else {
+      // divide right by shifting the lower index up
+      lowerIndex = guessIndex;
+    }
+
+    // Have our upper and lower bounds converged?
+    if ((lowerIndex + 1) === upperIndex) {
+      return upperIndex;
+    }
+  }
+
+  return -1;
+}
+
+module.exports = { linearTime, logN };
