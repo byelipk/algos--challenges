@@ -31,6 +31,11 @@ function linearTime(array) {
 
 // words = [ 'k','v','a','b','c','d','e','g','i' ];
 // words = [ 'v','a' ]
+// Space complexity: this algorithm takes O(1) space
+// Time complexity: this algorithm takes O(log n) time,
+// however, each iteration we do a string comparison. Since
+// words can vary in length, we could say the time complexity
+// is O(word_length * log n).
 function logN(sorted) {
   let lowerIndex = 0;
   let upperIndex = sorted.length - 1;
@@ -52,6 +57,11 @@ function logN(sorted) {
 
     // Have our upper and lower bounds converged?
     if ((lowerIndex + 1) === upperIndex) {
+      // Have we scanned a sorted array?
+      if ((upperIndex == sorted.length - 1) && sorted[upperIndex] > sorted[0]) {
+        return 0;
+      }
+      
       return upperIndex;
     }
   }

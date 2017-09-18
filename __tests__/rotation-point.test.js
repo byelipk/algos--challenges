@@ -39,3 +39,13 @@ test('O(log n) complex 2', () => {
   const words = ['q','r','s','t','u','v','a','b'];
   expect(logN(words)).toBe(6);
 });
+
+test('O(log n) complex 3', () => {
+  const words = ['a','b','c','d'];
+  expect(logN(words)).toBe(0);
+});
+
+test('O(log n) complex 4', () => {
+  const words = ['q','r','s','t','u','v','z','b'];
+  expect(logN(words)).toBe(7);
+});
