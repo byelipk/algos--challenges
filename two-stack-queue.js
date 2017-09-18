@@ -47,6 +47,8 @@ module.exports = TwoStackQueue;
   popped from outStack. All these operations are O(1) time. So, for
   "m" enqueues, we can say the time complexity of dequeue is O(m).
 
+  The trick is to think of the cost per item passing through our queue,
+  rather than the cost per enqueue() and dequeue()
 
 
 */
