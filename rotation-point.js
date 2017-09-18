@@ -61,12 +61,22 @@ function logN(sorted) {
       if ((upperIndex == sorted.length - 1) && sorted[upperIndex] > sorted[0]) {
         return 0;
       }
-      
+
       return upperIndex;
     }
   }
 
   return -1;
 }
+
+// The lessons binary search teaches us:
+//
+// 1. The value at a given index tells us a lot about what's to the
+//    left of the index and what's to the right.
+// 2. We don't have to scan through every item in the array to find
+//    what we're looking for; just look for the middle term.
+// 3. We can use the approach of cutting the problem in half
+//    over and over. We can even use this approach if the array
+//    is mostly sorted!
 
 module.exports = { linearTime, logN };
