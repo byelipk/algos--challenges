@@ -34,3 +34,13 @@ test('peek works', () => {
   expect(stack.peek()).toEqual(3);
   expect(stack.peek()).toEqual(3);
 });
+
+test('length property works', () => {
+  const stack = new Stack();
+
+  expect(stack.push(1)).toEqual(1);
+  expect(stack.push(2)).toEqual(2);
+  expect(stack.push(3)).toEqual(3);
+
+  expect(stack.size()).toEqual(3);
+});

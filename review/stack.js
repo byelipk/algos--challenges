@@ -32,6 +32,10 @@ class Stack {
       return peekedNode.value;
     }
   }
+
+  size() {
+    return this._count;
+  }
 }
 
 module.exports = { Stack }
