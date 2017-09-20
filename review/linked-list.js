@@ -70,6 +70,10 @@ class LinkedList {
 
     return deletedNode;
   }
+
+  findLast() {
+    return this.traverse(n => false);
+  }
 }
 
 module.exports = { LinkedList, ListNode }
