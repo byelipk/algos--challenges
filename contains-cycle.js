@@ -28,7 +28,30 @@ const containsCycle1 = function containsCycle(list) {
 }
 
 // O(n) time complexity
-// O(n) space complexity
+// O(1) space complexity
+const containsCycle2 = function containsCycle2(list) {
+  let counter = 0;
+  let fastRunner = list.next;
+  let slowRunner = list;
+
+  while (true) {
+    counter += 1;
+
+    if (!fastRunner) return false;
+    if (!fastRunner.next) return false;
+
+    if (fastRunner === slowRunner) {
+      return true;
+    } else {
+      fastRunner = fastRunner.next;
+    }
+
+    if (counter % 2 === 0) {
+      slowRunner = slowRunner.next;
+    }
+  }
+}
+
 const containsCycle2 = function containsCycle2(list) {
   let counter = 0;
   let fastRunner = list.next;
