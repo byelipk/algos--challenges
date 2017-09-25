@@ -15,5 +15,8 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jest": "^21.1.0",
     "jest": "^21.1.0"
+  },
+  "dependencies": {
+    "moment": "^2.18.1"
   }
 }
