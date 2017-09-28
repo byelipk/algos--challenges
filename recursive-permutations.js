@@ -1,30 +1,27 @@
 function getPermutations(string) {
-	// base case
-	if (string.length <= 1) {
-		return new Set(string);
-	}
+	// Base case
+	if (string.length <= 1) return new Set(string);
 
-	var allCharsExceptLast = string.slice(0, -1);
-	var lastChar = string[string.length - 1];
+	// 1. What do we need to update as we recurse into the string?
+	// 2. Do we want to work from the back of the string to the front,
+	// 		or from the front towards the back? Recursion usually works
+	//    top to bottom, while iteration usually from from the bottom up.
+	// 3. Where do we do the recursion?
+	const theChar = string[string.length - 1];
+	const theRest = string.slice(0, -1);
+	const theSet = getPermutations(theRest);
+	const theResult = new Set();
 
-	// recursive call: get all possible permutations for all chars except last
-	var permutationsOfAllCharsExceptLast = getPermutations(allCharsExceptLast);
-
-	// put the last char in all possible positions for each of the above permutations
-	var permutations = new Set();
-	permutationsOfAllCharsExceptLast.forEach(function(
-		permutationOfAllCharsExceptLast
-	) {
-		for (var position = 0; position <= allCharsExceptLast.length; position++) {
-			var permutation =
-				permutationOfAllCharsExceptLast.slice(0, position) +
-				lastChar +
-				permutationOfAllCharsExceptLast.slice(position);
-			permutations.add(permutation);
+	theSet.forEach(permutation => {
+		for (var i = 0; i <= theRest.length; i++) {
+			// We want theChar to be in every possible position.
+			// Slice is our friend, even though it has a weird API.
+			theResult.add(permutation.slice(0, i) + theChar + permutation.slice(i));
 		}
 	});
 
-	return permutations;
+	// When the recursion is done we'll have the result set we're looking for.
+	return theResult;
 }
 
 // I wasn't sure what the question was asking. Since it's just me and there's
@@ -41,4 +38,11 @@ function getPermutations(string) {
 // 'a' is a valid permutation of 'cab'. I think that would have shed some
 // more light into the problem. Also, I'm not that familiar with the Set
 // API.
+//
+// Even doing the problem over again I had trouble not knowing the expected
+// output.
+//
+// MAKE SURE YOU KNOW THE EXPECTED OUTPUT BEFORE TRYING TO SOLVE THE PROBLEM!
+
+
 module.exports = { getPermutations };

@@ -1,6 +1,18 @@
 const { getPermutations } = require('../recursive-permutations');
 
-test('valid assertions', () => {
-  // expect(getPermutations('a')).toEqual(new Set('a'));
-  // expect(getPermutations('ab')).toEqual(new Set('a','b','ab', 'ba'));
+test('a', () => {
+  const set = new Set();
+
+  set.add('a');
+
+  expect(getPermutations('a')).toEqual(set);
+});
+
+test('ab', () => {
+  const set = new Set();
+
+  set.add('ab');
+  set.add('ba');
+
+  expect(getPermutations('ab')).toEqual(set);
 });
