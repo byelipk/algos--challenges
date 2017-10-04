@@ -55,3 +55,5 @@ function swap(array, i, j) {
 console.log(qsort([3,2,1]));
 console.log(qsort( [2,1,4,3,6,5] ));
 console.log(qsort([1,5,3,7,9,2,4,8,6,5]));
+
+module.exports = { qsort };
