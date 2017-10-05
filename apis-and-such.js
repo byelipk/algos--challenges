@@ -2,16 +2,16 @@ const moment = require("moment");
 
 const now = moment.now();
 const today = moment(now).format();
-// const tomorrow = moment(now).add(1, "day").format();
-// const twoDaysFromNow = moment(now).add(2, "days").format();
-// const threeDaysFromNow = moment(now).add(3, "days").format();
-// const fourDaysFromNow = moment(now).add(4, "days").format();
-// const fiveDaysFromNow = moment(now).add(5, "days").format();
-// const sixDaysFromNow = moment(now).add(6, "days").format();
-// const oneWeekFromNow = moment(now).add(1, "week").format();
-// const twoWeeksFromNow = moment(now).add(2, "week").format();
-// const threeWeeksFromNow = moment(now).add(3, "week").format();
-// const oneMonthFromNow = moment(now).add(1, "month").format();
+const tomorrow = moment(now).add(1, "day").format();
+const twoDaysFromNow = moment(now).add(2, "days").format();
+const threeDaysFromNow = moment(now).add(3, "days").format();
+const fourDaysFromNow = moment(now).add(4, "days").format();
+const fiveDaysFromNow = moment(now).add(5, "days").format();
+const sixDaysFromNow = moment(now).add(6, "days").format();
+const oneWeekFromNow = moment(now).add(1, "week").format();
+const twoWeeksFromNow = moment(now).add(2, "week").format();
+const threeWeeksFromNow = moment(now).add(3, "week").format();
+const oneMonthFromNow = moment(now).add(1, "month").format();
 
 // Assume the dates are sorted
 
